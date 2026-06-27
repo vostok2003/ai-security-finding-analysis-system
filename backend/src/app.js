@@ -14,7 +14,10 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || '*',
+    origin: [
+      'http://localhost:5173',
+      'https://ai-security-finding-analysis-system.vercel.app',
+    ],
     credentials: true,
   })
 );
